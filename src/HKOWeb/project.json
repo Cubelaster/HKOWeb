@@ -7,9 +7,13 @@
     "emitEntryPoint": true
   },
   "dependencies": {
+    "bootstrap": "3.3.6",
+    "datatables.net": "1.10.11",
     "EntityFramework": "6.1.3",
     "EntityFramework.Commands": "7.0.0-rc1-final",
     "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
+    "jQuery": "2.2.2",
+    "jQuery.Validation": "1.15.0",
     "Microsoft.ApplicationInsights.AspNet": "1.0.0-rc1",
     "Microsoft.AspNet.Authentication.Cookies": "1.0.0-rc1-final",
     "Microsoft.AspNet.Diagnostics.Entity": "7.0.0-rc1-final",
@@ -27,6 +31,7 @@
     "Microsoft.Extensions.Logging": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
+    "Microsoft.jQuery.Unobtrusive.Validation": "3.2.3",
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc1-final"
   },
   "exclude": [
@@ -35,9 +40,7 @@
   ],
   "frameworks": {
     "dnx451": {
-      "frameworkAssemblies": {
-        "System.Data": "4.0.0.0"
-      }
+      
     }
   },
   "publishExclude": [

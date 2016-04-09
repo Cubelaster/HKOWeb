@@ -1,0 +1,51 @@
+@model IEnumerable<HKOWeb.Models.HKOWebModels.ZanimanjaOverview>
+
+@{
+    ViewData["Title"] = "Zanimanja Overview";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Zanimanja Overview</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table id="drugi">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(Model => Model.modulNaziv)</th>
+            <th>@Html.DisplayNameFor(model => model.studijNaziv)</th>
+            <th>@Html.DisplayNameFor(model => model.zanimanjeNaziv)</th>
+            <th>Poveznice:</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.modulNaziv)</td>
+                <td>@Html.DisplayFor(modelItem => item.studijNaziv)</td>
+                <td>@Html.DisplayFor(modelItem => item.zanimanjeNaziv)</td>
+                <td>
+                    <div class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-disabled">Opcije:</button>
+                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a asp-action="RadnaMjesta" asp-route-id="@item.ZanimanjaOverviewID">Radna mjesta</a></li>
+                            <li><a asp-action="KljucniPoslovi" asp-route-id="@item.ZanimanjaOverviewID">Kljuèni poslovi</a></li>
+                            <li><a asp-action="Kompetencije" asp-route-id="@item.ZanimanjaOverviewID">Kompetencije</a></li>
+                            <li><a asp-action="Kolegiji" asp-route-id="@item.ZanimanjaOverviewID">Kolegiji</a></li>
+                            <li><a asp-action="IshodiUcenja" asp-route-id="@item.ZanimanjaOverviewID">Ishodi uèenja</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a asp-action="Delete" asp-route-id="@item.ZanimanjaOverviewID">Showcase</a></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
