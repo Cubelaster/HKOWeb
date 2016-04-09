@@ -23,7 +23,6 @@ namespace HKOWeb.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ISmsSender _smsSender;
         private readonly ILogger _logger;
-        private readonly ILogger _logger2;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
